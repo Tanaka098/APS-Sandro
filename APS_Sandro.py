@@ -11,40 +11,38 @@ def cabecalho():
 <style>
      h1{
           text-align: center;
-          font-size: 30px;
+          font-size: 35px;
           font-family: 'Times New Roman', Times, serif;
      }
      h3{
           text-align: left;
-          font-size: 15px;
+          font-size: 25px;
           font-family: 'Times New Roman', Times, serif;         
      }
      .Subtitulo{
+          text-align: center;
+          font-size: 20px;
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: normal;
+          color: white;
+          background-color: rgb(0, 0, 110);
+          border-radius: 20px;
+     }
+     .dados {
           text-align: left;
           font-size: 20px;
           font-family: 'Times New Roman', Times, serif;
           font-weight: normal;
      }
-     .dados{
-          text-align: left;
-          font-size: 12px;
-          font-family: 'Times New Roman', Times, serif;
-          font-weight: normal;
-     }
-     .iframe{
-          width: 100%;
-     }
 
 </style>
 <body>
+
 <h1>Currículo Vitae</h1>
-<iframe src="Informacoes pessoais.html" frameborder="0"></iframe>
-<iframe src="Idiomas.html" frameborder="0"></iframe>
-<iframe src="Informacoes profissional.html" frameborder="0"></iframe>
-<iframe src="Escolaridade.html" frameborder="0"></iframe>
+
 ''')
 def dados_pessoais():
-     info_pessoal = open("Informacoes pessoais.html", 'a', encoding='utf-8')
+     info_pessoal = open("Curriculo.html", 'a', encoding='utf-8')
      nome = input("Nome:")
      idade = input("Idade:")
      endereco = input("Endereço:")
@@ -60,7 +58,7 @@ def dados_pessoais():
      info_pessoal.close()
 
 def idiomas():
-     idiomas = open('Idiomas.html', 'a', encoding='utf-8')
+     idiomas = open('Curriculo.html', 'a', encoding='utf-8')
      resposta = 'S'
      idiomas.write(f'''
 <h2 class="Subtitulo">Idiomas</h2>
@@ -75,7 +73,7 @@ def idiomas():
      idiomas.close()
 
 def dados_profissional():
-     info_profissional = open("Informacoes profissional.html", 'a', encoding='utf-8')
+     info_profissional = open("Curriculo.html", 'a', encoding='utf-8')
      info_profissional.write(f'''
 <h2 class="Subtitulo">Experiência profissional</h2>''')
      resposta = 'S'
@@ -93,7 +91,7 @@ def dados_profissional():
      info_profissional.close()
 
 def escolaridade():
-     escolaridade = open("Escolaridade.html", 'a', encoding='utf-8')
+     escolaridade = open("Curriculo.html", 'a', encoding='utf-8')
      escolaridade.write(f'''
 <h2 class="Subtitulo">Escolaridade</h2>''')
      resposta = 'S'
